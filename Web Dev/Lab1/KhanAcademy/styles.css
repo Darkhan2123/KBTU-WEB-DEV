@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff; /* Set background color to white */
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+}
+
+.black-box {
+    width: 200px;
+    height: 200px;
+    background-color: #000; /* Set background color to black */
+}
