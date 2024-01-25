@@ -5,16 +5,16 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #fff; /* Set background color to white */
+    background-color: #f0f0f0;
 }
 
 .container {
-    width: 100%;
     text-align: center;
 }
 
-.black-box {
-    width: 200px;
-    height: 200px;
-    background-color: #000; /* Set background color to black //*/
+.centered-box {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
 }
