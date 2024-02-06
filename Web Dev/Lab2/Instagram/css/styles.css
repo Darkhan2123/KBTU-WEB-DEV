@@ -1,0 +1,140 @@
+body{
+    font-family: "Roboto Light", sans-serif;
+    background-color: white;
+}
+.main-container{
+    padding: 16px;
+    width: 350px;
+    height: 380px;
+    position: absolute;
+    left:800px;
+    top: 40px;
+    border: 1px solid #ccc;
+}
+.main-container #email {
+    width: 274px;
+    height: 40px;
+    background-color: #efefef;
+    border: 1px solid #efefef;
+    box-sizing: border-box;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    z-index: 0;
+}
+.main-container #password {
+    width: 70%;
+    height:30px;
+    background-color: #efefef;
+    border: 1px solid #efefef;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    z-index: 1;
+}
+::placeholder{
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    padding-left: 5px;
+}
+.small-container{
+    padding-left: 19px;
+    position: absolute;
+    top: 470px;
+    left:800px;
+    width: 386px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+.small-container a{
+    color: #0095f6;
+}
+button{
+    background-color: #3897f0;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    width: 70%;
+    height: 30px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    position: absolute;
+    top:250px;
+    left:54px;
+    z-index: 2;
+}
+.text{
+    position: absolute;
+    top: 520px;
+    left:899px;
+}
+.OR{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color:gray;
+    margin: 20px 0;
+    padding-top: 260px;
+}
+.OR::before,
+.OR::after{
+    content: "";
+    width: 120px;
+    border-bottom: 1px solid #000;
+    margin: 0 10px;
+}
+#facebook{
+    position: absolute;
+    top: 320px;
+    left: 115px;
+}
+#color-facebook{
+    color: #385185;
+    font-weight: 600;
+}
+#forget-password{
+    font-size: 13px;
+    cursor: pointer;
+    position: absolute;
+    top: 360px;
+    left:140px
+
+}
+#img1{
+    width: 9%;
+    position: absolute;
+    top:570px;
+    left:1000px;
+}
+.main-container #img2{
+    width: 5%;
+    position: absolute;
+    top:336px;
+    left:85px;
+}
+#img3{
+    position: absolute;
+    left:850px;
+    top:570px;
+    width: 9%;
+}
+.main-container #img4{
+    width: 50%;
+    position: absolute;
+    z-index: 3;
+    top: 40px;
+    left: 90px;
+}
+#img5{
+    position: absolute;
+    z-index: 0;
+    top: 20px;
+    left: 350px;
+}
+#img6{
+    position: absolute;
+    z-index: 1;
+    top: 120px;
+    left: 500px;
+}
