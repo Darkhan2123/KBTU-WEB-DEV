@@ -41,9 +41,8 @@ body{
 .task-box {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
+    border: 1px #ccc;
     padding: 10px;
-    margin: 10px 0;
     width: 35%;
     position: relative;
     left: 485px;
