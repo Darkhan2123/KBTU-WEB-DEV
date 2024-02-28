@@ -1,0 +1,228 @@
+export interface Product {
+  category: string;
+  image: string;
+  rating: number;
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  link: string;
+}
+
+export const products: Product[] = [
+  {
+    category: "Smartphone",
+    image: 'data:image/jpeg;base64,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',
+    rating: 2,
+    id: 1,
+    name: 'Phone 11',
+    price: 799,
+    description: 'A large phone with one of the best screens',
+    link: "tps://kaspi.kz/shop/p/apple-iphone-11-64gb-chernyi-1005115/"
+  },
+  {
+    category: "Smartphone",
+    image: 'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h96/h3c/46392664227870/apple-iphone-13-128gb-belyj-102298420-1-Container.jpg',
+    id: 2,
+    name: 'Phone 13',
+    rating: 2.3,
+    price: 899,
+    description: 'A great phone with one of the best cameras',
+    link: "https://kaspi.kz/shop/p/apple-iphone-13-128gb-belyi-102298420/"
+  },
+  {
+    category: "Smartphone",
+    image: "data:image/jpeg;base64,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",
+    id: 3,
+    rating: 3.8,
+    name: 'Phone XR',
+    price: 699,
+    description: 'The best phone for his price',
+    link: "https://kaspi.kz/shop/p/apple-iphone-xr-128gb-slim-box-chernyi-100692542/"
+  },
+
+  {
+    category:"Headphones",
+    image: 'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h12/h12/46719106023454/apple-airpods-3-belyj-102667744-1.jpg',
+    id: 4,
+    rating: 5.0,
+    name: 'Airpods 3 series',
+    price: 200,
+    description: 'The Apple-designed dynamic driver uses a dedicated amplifier to deliver incredible sound detail. rewind tracks, answer calls and end them. The headphone case is easily charged with the MagSafe charger.',
+    link: "https://kaspi.kz/shop/p/apple-airpods-3-belyi-102667744/",
+  },
+  {
+    category:"Headphones",
+    image: 'data:image/jpeg;base64,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',
+    id: 5,
+    rating: 6.0,
+    name: 'Airpods pro',
+    price: 250,
+    description: 'AirPods Pro are unique headphones with Active Noise Canceling technology that continuously optimizes sound based on the shape of your ear and the position of the earbuds. They perfectly muffle external noise, so you can completely immerse yourself in the music. These are brand new headphones.',
+    link: "https://kaspi.kz/shop/p/apple-airpods-pro-belyi-4804718/",
+  },
+  {
+    category: "Laptop",
+    image: 'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hd6/h5b/33271772446750/apple-macbook-air-2020-13-3-mgn93-serebristyj-100798912-1-Container.jpg',
+    id: 6,
+    rating: 7.0,
+    name: 'Macbook Air M1',
+    price: 1399,
+    description: 'Small chip. Big breakthrough The first chip designed specifically for the Mac. Amazingly, the Apple M1 system-on-a-chip packs 16 billion transistors and integrates a CPU, GPU, Neural Engine, I/O controllers, and a host of other components. The Apple M1 chip brings unique technologies to your Mac and delivers incredible performance combined with industry-leading power efficiency.',
+    link: "https://kaspi.kz/shop/p/apple-macbook-air-13-mgn93-serebristyi-100798912/",
+  },
+  {
+    category: "Laptop",
+    image: 'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hd9/h66/33943966842910/apple-macbook-pro-13-m1-2020-custom-16-gb-1-tb-ssd-z11b-a2338-seryj-101029564-1.jpg',
+    id: 7,
+    rating: 5.0,
+    name: 'Macbook Pro M1',
+    price: 1699,
+    description: 'The M1 chip has a built-in Neural Engine, a component that Apple first started adding to its A-series chips a few years ago. The Neural Engine is designed to accelerate machine learning tasks across the Mac for things like video analysis, voice recognition, image processing, and more',
+    link: "https://kaspi.kz/shop/p/apple-macbook-pro-13-m1-2020-custom-16-gb-1-tb-ssd-z11b-a2338-seryi-101029564/",
+  },
+  {
+    category: "Smart-Watch",
+    image: 'data:image/webp;base64,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',
+    id: 8,
+    rating: 3.5,
+    name: 'Apple Watch 6 series ',
+    price: 499,
+    description: 'Retina Display: Now you dont have to raise your hand or touch the display to see the time or other information on the watch face. When you need to quickly check your time or fitness metrics - like when you are cycling, doing abs or sitting in a meeting for a long time - just glance at the display.',
+    link: "https://kaspi.kz/shop/p/apple-watch-series-6-44-mm-seryi-100568498/",
+  },
+  {
+    category: "Smart-Watch",
+    image: 'data:image/webp;base64,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',
+    id: 9,
+    rating: 8.0,
+    name: 'Apple Watch 7 series',
+    price: 599,
+    description: 'Series 7 is the most durable Apple Watch ever. Fundamental design changes were necessary because the challenge was to create an always-on, larger Retina display. Innovative solutions have been developed specifically for this. Then, with their help, it was possible to make the front glass of the display of ultra-high strength with protection against cracks.',
+    link: "https://kaspi.kz/shop/p/apple-watch-series-7-45-mm-chernyi-102582811/",
+  },
+  {
+    category: "Smart-Watch",
+    image: 'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h1a/h69/63158968057886/apple-watch-series-8-41-mm-cernyj-106362847-1.jpg',
+    id: 10,
+    rating: 5.5,
+    name: 'Apple Watch 8 series',
+    price: 699,
+    description: 'Apple Watch Series 8 has an innovative new sensor that tracks your temperature while you sleep, so you can see changes over time. Cycle Tracking uses this data to provide a retrospective estimate of when you likely ovulated, which can be helpful for family planning.',
+    link: "https://kaspi.kz/shop/p/apple-watch-series-8-45-mm-aluminum-chernyi-106362847/",
+  },
+  {
+    category: "Smartphone",
+    image: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ4vHAr69oGaVkjYL2uwJrGoq3Cu4PTDCZms-xmHUpj5Ts8jG4b2LMa4dvBBWuz9yfNLESeVjZBqGMu39m2a1EdM42AKdAUVPbgOWuPOolqfKbhSwdbRlMqUOvafraHGeAtHHPYVToygSdo&usqp=CAc',
+    id: 11,
+    rating: 1.0,
+    name: 'Iphone 14 pro',
+    price: 1299,
+    description: 'The iPhone 14 Pro comes with a 6.1-inch ProMotion OLED display with 1-120Hz adaptive refresh rates, Dolby Vision, and a Face ID Dynamic Island that allows Apple to utilize an always-on display feature, which dims the lock screen similarly to an Apple Watch.',
+    link: 'https://kaspi.kz/shop/p/apple-iphone-14-pro-128gb-serebristyi-106363274/'
+  },
+  {
+    category: "Smartphone",
+    image: 'data:image/jpeg;base64,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',
+    id: 12,
+    rating: 9.0,
+    name: 'Iphone 14 pro max',
+    price: 1499,
+    description: 'The iPhone 14 Pro Max measures in at 6.33 inches tall (160.7mm), 3.05 inches wide (77.6mm), and 0.31 inches thick (7.85mm). Apples iPhone 14 Pro weighs 7.27 ounces or 206 grams, while the Pro Max weighs 8.47 ounces or 240 grams.',
+    link: 'https://kaspi.kz/shop/p/apple-iphone-14-pro-max-256gb-chernyi-106363289/'
+  },
+  {
+    category: "Laptop",
+    image: 'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hd8/hac/52195421978654/custom-16-inch-macbook-pro-apple-m1-max-with-10c-cpu-32c-gpu-64gb-unified-memory-1tb-ssd-space-grey-105663881-1.jpg',
+    id: 13,
+    rating: 7.0,
+    name: 'Macbook Pro 16',
+    price: 6000,
+    description: 'The Apple MacBook Pro "M1 Max" 10-Core CPU/32-Core GPU 16-Inch (2021) model features a 3.2 GHz Apple M1 Max processor with ten cores (eight performance cores and 2 efficiency cores), a 32-core GPU, a 16-core Neural Engine, 32 GB of onboard RAM, and a 1 TB onboard SSD',
+    link: 'https://kaspi.kz/shop/p/apple-macbook-pro-16-z14x000me-seryi-105663881/'
+  },
+  {
+    category: "Laptop",
+    image:'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h40/h14/32693202059294/acer-aspire-7-gaming-a715-75g-nh-q87er-00f-cernyj-100503512-1-Container.jpg',
+    id: 14,
+    rating: 6.0,
+    name: 'Acer Aspire 7 Gaming',
+    price: 1299,
+    description: 'Strict design hides great opportunities - powerful processors and video cards will allow you to enjoy modern games and easily cope with work tasks. The large 15.6 IPS screen has a narrow bezel, making the notebook more compact than traditional 15 models. With m.2 SSD storage and Wi-Fi 6 wireless connectivity for extra speed, the Aspire 7 delivers outstanding performance despite its compact size.',
+    link: 'https://kaspi.kz/shop/p/acer-aspire-7-gaming-a715-75g-nh-q87er-00f-chernyi-100503512/'
+  },
+  {
+    category: "Laptop",
+    image: 'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hb7/h54/47697415864350/lenovo-ideapad-gaming-3-15ihu6-82k1005ark-cernyj-103140545-1.jpg',
+    id: 15,
+    rating: 5.5,
+    name: 'Lenovo Ideapad Gaming 3',
+    price: 1099,
+    description: 'Play, record and stream games simultaneously with a powerful and efficient 35W processor optimized for maximum performance. Play most of the top games in Full HD resolution. Enjoy blazing data transfer speeds and ultimate network connectivity with Intel Wi-Fi 5. Play at the highest settings with the latest NVIDIA GeForce RTX 3050 mobile graphics cards.',
+    link: 'https://kaspi.kz/shop/p/lenovo-ideapad-gaming-3-15ihu6-82k1005ark-chernyi-103140545/'
+  },
+  {
+    category:"Headphones",
+    image:'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h0f/h18/33524667154462/apple-airpods-max-serebristyj-100949286-1-Container.jpg',
+    id: 16,
+    rating: 4.5,
+    name: 'Airpods Max',
+    price: 799,
+    description: 'The Apple AirPods Max Bluetooth Headset can completely change the way you think about full-size headphones. This model is designed using first-class materials and advanced technologies. It is based on the Apple H1 processor and proprietary dynamic drivers, among the advantages of which one can note high performance parameters.',
+    link: 'https://kaspi.kz/shop/p/apple-airpods-max-serebristyi-100949286/'
+  },
+  {
+    category:"Headphones",
+    image: 'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hfa/h88/47981646905374/bang-olufsen-1321010-beoplay-portal-sinij-103190576-1.jpg',
+    id: 17,
+    rating: 3.7,
+    name: 'Bang & Olufsen 1321010 Beoplay',
+    price: 699,
+    description: 'Beoplay Portal are powerful, comfortable headphones that fit seamlessly into your life - whether youre gaming, listening to music or talking on the phone. Connect to your computer wirelessly to chat, interact and listen to music during work hours, answer calls from your phone, and then immerse yourself in the game with an uninterrupted Xbox connection when its time to relax.',
+    link: 'https://kaspi.kz/shop/p/bang-olufsen-1321010-beoplay-portal-sinii-103190576/'
+  },
+  {
+    category:"Headphones",
+    image: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS-d2xWGkpGf_oUdEwjVh3cnYm99wihWqT3TYfvEcegRKvQ7rP2W0qFQ79PDU4TQWo3ev-8QSQkJTGFCchVFDyxs1xmA5UQYSi4m7JYZe_a9-dqJLTti3zxi0-2bp5dADR9GMRsJ0Mg&usqp=CAc',
+    id: 18,
+    rating: 9.0,
+    name: 'Samsung Galaxy Buds Live',
+    price: 249,
+    description: 'These headphones are designed to be in tune with your lifestyle. Their iconic shape and groundbreaking ergonomic design will blend in with your natural surroundings. Their speaker is also optimized for your quality user experience. This sound was made for your ears.',
+    link: 'https://kaspi.kz/shop/p/samsung-galaxy-buds-live-chernyi-100491521/'
+  },
+  {
+    category: "Smart-Watch",
+    image: 'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h6c/h85/62047597592606/samsung-galaxy-watch-4-classic-sm-r890-cernyj-102170938-1-Container.jpg',
+    id: 19,
+    rating: 3.4,
+    name: 'Samsung Galaxy Watch 4 Classic',
+    price: 299,
+    description: 'Samsung smart watches are not just a gadget, but your faithful companion on the way to achieving goals and self-improvement. Seek help from a personal trainer, doctor, and analyst right here and now with the Galaxy Watch4 smartwatch. Listen to your body. The Galaxy Watch4 smart watch is designed to make it easy for us to track and capture the data coming from your body.',
+    link: 'https://kaspi.kz/shop/p/samsung-galaxy-watch-4-classic-sm-r890nzkacis-46-mm-chernyi-chernyi-102170938/'
+  },
+  {
+    category: "Smart-Watch",
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQfdl6X8MGG8bHpefA7u9fxJUZtr6Xb4GeF62M9OiTYGAJZr63M6iJr43JDof3fAgORtAKDEB7IffIc6nftMq6sok7OOZ5z88IF7cfb63Worbmys-1krQjR6QVejgQtsUHVBvFiQvEYt9k&usqp=CAc',
+    id: 20,
+    rating: 7.3,
+    name: 'Huawei Watch GT3 Pro',
+    price: 499,
+    description: 'The watch displays diving data in real time, including the speed, depth, and duration of dives.',
+    link:'https://kaspi.kz/shop/p/huawei-watch-gt3-pro-43-mm-belyi-105186210/'
+  },
+  
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+];
