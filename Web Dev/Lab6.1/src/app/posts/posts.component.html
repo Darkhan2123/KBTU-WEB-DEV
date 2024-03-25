@@ -7,7 +7,11 @@
 
 <ul *ngIf="loaded">
   <li *ngFor="let post of posts">
+<<<<<<< HEAD
     <a routerLink="/posts/{{post.id}}">
+=======
+    <a routerLink="/albums/{{post.id}}">
+>>>>>>> 9b2b43467898aa7608a5a992d2dff9fc2d5e722f
       {{post.id}}) {{post.title}}
     </a>
     <button (click)="deletePost(post.id)">Delete</button>
