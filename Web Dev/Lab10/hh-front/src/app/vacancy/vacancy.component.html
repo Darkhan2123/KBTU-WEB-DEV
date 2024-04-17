@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Vacancy Management</h2>
+  <button class="btn btn-primary mb-3" (click)="addNewVacancy()">Add New Vacancy</button>
+  <div *ngIf="selectedVacancy" class="form-group">
+    <form (ngSubmit)="saveVacancy()">
+      <input type="text" [(ngModel)]="selectedVacancy.name" name="name" placeholder="Name" required>
+      <textarea [(ngModel)]="selectedVacancy.description" name="description" placeholder="Description" required></textarea>
+      <input type="number" [(ngModel)]="selectedVacancy.salary" name="salary" placeholder="Salary" required>
+
+      <!-- Dropdown to select the company for the vacancy -->
+      <select [(ngModel)]="selectedVacancy.company" name="company" required class="form-control mb-3">
+        <option [value]="null">Select Company</option>
+        <option *ngFor="let company of companies" [value]="company.id">{{ company.name }}</option>
+      </select>
+
+      <button type="submit" class="btn btn-success">{{ isEditing ? 'Update' : 'Create' }}</button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button>
+      <button type="button" class="btn btn-danger" *ngIf="isEditing" (click)="deleteVacancy(selectedVacancy.id)">Delete</button>
+    </form>
+  </div>
+  <ul>
+    <li *ngFor="let vacancy of vacancies" (click)="selectVacancy(vacancy)">
+      {{ vacancy.name }} - {{ vacancy.salary }}
+    </li>
+  </ul>
+</div>
+<button class="btn btn-info" routerLink="/home">Home</button>

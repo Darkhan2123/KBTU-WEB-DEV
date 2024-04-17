@@ -1,0 +1,49 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #17a2b8;
+  transform: scale(1.05);
+}
+
+/* Additional button style for clarity and differentiation */
+.btn-primary:not(:last-child) {
+  margin-right: 15px;
+}
+
+/* Ensures buttons and content are centered on smaller screens */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

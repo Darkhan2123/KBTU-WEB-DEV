@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Company Management</h2>
+  <button class="btn btn-primary mb-3" (click)="addNewCompany()">Add New Company</button>
+  <div *ngIf="selectedCompany" class="form-group">
+    <form (ngSubmit)="saveCompany()">
+      <input type="text" [(ngModel)]="selectedCompany.name" name="name" placeholder="Name" required>
+      <textarea [(ngModel)]="selectedCompany.description" name="description" placeholder="Description" required></textarea>
+      <input type="text" [(ngModel)]="selectedCompany.city" name="city" placeholder="City" required>
+      <input type="text" [(ngModel)]="selectedCompany.address" name="address" placeholder="Address" required>
+      <button type="submit" class="btn btn-success">{{ isEditing ? 'Update' : 'Create' }}</button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button>
+      <button type="button" class="btn btn-danger" *ngIf="isEditing" (click)="deleteCompany(selectedCompany.id)">Delete</button>
+    </form>
+  </div>
+  <ul>
+    <li *ngFor="let company of companies" (click)="selectCompany(company)">
+      {{ company.name }} - {{ company.city }}
+    </li>
+  </ul>
+</div>
+<button class="btn btn-info" routerLink="/home">Home</button>
